@@ -14,4 +14,10 @@ RSpec.describe Flotilla do
 
     expect(seventh_flotilla.name).to eq('Seventh Flotilla')
   end
+
+  it 'starts with empty array of personnel' do
+    seventh_flotilla = Flotilla.new({designation: 'Seventh Flotilla'})
+
+    expect(seventh_flotilla.personnel).to eq([])
+  end
 end
