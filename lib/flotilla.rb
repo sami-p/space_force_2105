@@ -1,9 +1,11 @@
 class Flotilla
   attr_reader :name,
-              :personnel
+              :personnel,
+              :ships
 
   def initialize(info)
     @name = info[:designation]
     @personnel = []
+    @ships = []
   end
 end
