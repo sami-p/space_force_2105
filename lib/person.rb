@@ -8,4 +8,8 @@ class Person
     @experience = experience
     @specialties = []
   end
+
+  def add_specialty(specialty)
+    @specialties << specialty 
+  end
 end
