@@ -30,6 +30,15 @@ RSpec.describe Flotilla do
   end
 
   describe 'Flotilla methods' do
+    it 'can add a ship' do
+      daedalus = Spacecraft.new({name: 'Daedalus', fuel: 400})
+      seventh_flotilla = Flotilla.new({designation: 'Seventh Flotilla'})
+
+      seventh_flotilla.add_ship(daedalus)
+
+      expect(seventh_flotilla.ships).to eq([daedalus])
+    end
+
     it 'can add personnel' do
       kathy = Person.new('Kathy Chan', 10)
       kathy.add_specialty(:astrophysics)
